@@ -1,4 +1,4 @@
---1)Создать таблицу employees
+--1)Create table employees:
 --- id. serial,  primary key,
 --- employee_name. Varchar(50), not null
 create table employees(
@@ -8,82 +8,82 @@ create table employees(
 
 select * from employees;
 
---2)Наполнить таблицу employee 70 строками.
+--2)Populate the employee table with 70 rows"
 insert into employees(employee_name)
-values  ('Евгений Мухин'
-		('Михаил Сергеев'),
-		('София Селиванова'),
-		('Анна Игнатова'),
-		('Елизавета Сорокина'),
-		('Богдан Мельников'),
-		('Иван Максимов'),
-		('Дмитрий Грачев'),
-		('Лев Казаков'),
-		('Александр Соколов'),
-		('Лев Петров'),
-		('Марк Куликов'),
-		('Юлия Шаповалова'),
-		('Николай Софронов'),
-		('Алиса Гусева'),
-		('Александр Субботин'),
-		('Марьям Фомина'),
-		('Роман Корнеев'),
-		('Евгения Ефремова'),
-		('Михаил Аксенов'),
-		('Константин Золотов'),
-		('Екатерина Давыдова'),
-		('Екатерина Королева'),
-		('Софья Андреева'),
-		('Анастасия Рябова'),
-		('Марианна Иванова'),
-		('Арсений Чижов'),
-		('Ксения Иванова'),
-		('Амира Горелова'),
-		('Полина Исаева'),
-		('Михаил Алешин'),
-		('Александра Михайлова'),
-		('Мария Ковалева'),
-		('Мария Комарова'),
-		('Тигран Лаптев'),
-		('Даниил Капустин'),
-		('Семён Егоров'),
-		('Иван Мартынов'),
-		('Мирослав Иванов'),
-		('Егор Орлов'),
-		('Фёдор Михайлов'),
-		('Полина Зимина'),
-		('Александр Борисов'),
-		('Иван Черный'),
-		('Михаил Казаков'),
-		('Мирослава Зотова'),
-		('Максим Чернышев'),
-		('Кира Богомолова'),
-		('Александр Никонов'),
-		('Софья Князева'),
-		('София Лазарева'),
-		('Семён Нестеров'),
-		('Никита Акимов'),
-		('Дмитрий Никонов'),
-		('Эмир Алексеев'),
-		('Кира Соколова'),
-		('Эмиль Шмелев'),
-		('Денис Королев'),
-		('Георгий Никитин'),
-		('Максим Свиридов'),
-		('Александр Терентьев'),
-		('Анастасия Курочкина'),
-		('Артём Прохоров'),
-		('Михаил Еремин'),
-		('Александра Филиппова'),
-		('Роман Лопатин'),
-		('Леонид Козловский'),
-		('Андрей Гончаров'),
-		('Андрей Глебов'),
-		('Фёдор Васильев'),;
+values  ('Donald Adams'),
+		('Jerry Phelps'),
+		('Sarah Smith'),
+		('Karen Strickland'),
+		('Kyle Walters'),
+		('Shirley Wheeler'),
+		('Edward Hall'),
+		('Thomas Martin'),
+		('June Garza'),
+		('Vanessa Gonzales'),
+		('Benjamin McBride'),
+		('Elizabeth Smith'),
+		('Susan Duncan'),
+		('Gary Roberts'),
+		('Charles Caldwell'),
+		('Scott Smith'),
+		('John McKinney'),
+		('Betty Swanson'),
+		('Kelly Martinez'),
+		('David Jordan'),
+		('Patricia Frazier'),
+		('Shannon Davis'),
+		('William Rivera'),
+		('Shirley Murphy'),
+		('Leroy Davis'),
+		('Morris Hamilton'),
+		('Barbara Wallace'),
+		('Ethel Walker'),
+		('Julie Allen'),
+		('Michael Gordon'),
+		('Jo Torres'),
+		('Herman Murphy'),
+		('Richard Thomas'),
+		('James Chavez'),
+		('Steven Thompson'),
+		('Robert Caldwell'),
+		('David Fox'),
+		('Jack Webb'),
+		('Ralph Price'),
+		('Helen Johnson'),
+		('Tyrone Reynolds'),
+		('Jeffrey King'),
+		('Walter Lopez'),
+		('Juan Mathis'),
+		('Fernando Cole'),
+		('Cynthia Matthews'),
+		('Alan Curtis'),
+		('Lisa Morris'),
+		('Alberto Thompson'),
+		('Richard Butler'),
+		('Doris Rodriguez'),
+		('Joseph Hayes'),
+		('James Wright'),
+		('Jean Brooks'),
+		('Tracy Page'),
+		('Darryl Rose'),
+		('Paul Rivera'),
+		('Karen Miller'),
+		('Darlene Clark'),
+		('Betty Mendoza'),
+		('Elsie Shaw'),
+		('Rebecca Rodgers'),
+		('Christopher Graham'),
+		('Curtis Moore'),
+		('Randall Barber'),
+		('Mildred Johnson'),
+		('Kenneth Walker'),
+		('Sara Matthews'),
+		('Jonathan Shelton'),
+		('Brian Dunn');
 		
 select * from employees;
 
---3)Создать таблицу salary
+--3)Create table salary:
 --- id. Serial  primary key,
 --- monthly_salary. Int, not null
 
@@ -94,7 +94,7 @@ create table salary (
 
 select * from salary;
 
---4)Наполнить таблицу salary 15 строками:
+--4)Populate the salary table with 15 rows.
 insert into salary(monthly_salary)
 values  (1000),
 		(1100),
@@ -110,12 +110,11 @@ values  (1000),
 		(2100),
 		(2200),
 		(2300),
-		(2400),
-		(2500);
+		(2400);
 	
 select * from salary;
 
---5)Создать таблицу employee_salary
+--5)Create table employee_salary:
 --- id. Serial  primary key,
 --- employee_id. Int, not null, unique
 --- salary_id. Int, not null
@@ -127,8 +126,8 @@ create table employee_salary(
 
 select * from employee_salary;
 
---6)Наполнить таблицу employee_salary 40 строками:
---- в 10 строк из 40 вставить несуществующие employee_id
+--6)Populate the employee_salary table with 40 rows
+--- in 10 lines out of 40 insert non-existent employee_id.
 insert into employee_salary(employee_id, salary_id)
 values  (54,2),
 		(35,9),
@@ -173,7 +172,7 @@ values  (54,2),
 
 select * from employee_salary;
 
---7)Создать таблицу roles
+--7)Create table roles:
 --- id. Serial  primary key,
 --- role_name. int, not null, unique
 create table roles(
@@ -183,20 +182,39 @@ create table roles(
 
 select * from roles;
 
---8)Поменять тип столба role_name с int на varchar(30)
+--8)Change column type role_name from int to varchar(30).
 alter table roles
 alter column role_name type varchar(30);
 
---9)Наполнить таблицу roles 20 строками:
+--9)Populate the roles table with 20 rows:
 insert into roles(role_name)
-values  ('Junior Python developer'),		('Middle Python developer'),		('Senior Python developer'),		('Junior Java developer'),		('Middle Java developer'),		('Senior Java developer'),		('Junior JavaScript developer'),		('Middle JavaScript developer'),		('Senior JavaScript developer'),		('Junior Manual QA engineer'),		('Middle Manual QA engineer'),		('Senior Manual QA engineer'),		('Project Manager'),		('Designer'),		('HR'),		('CEO'),		('Sales manager'),		('Junior Automation QA engineer'),		('Middle Automation QA engineer'),		('Senior Automation QA engineer');
+values  ('Junior Python developer'),
+		('Middle Python developer'),
+		('Senior Python developer'),
+		('Junior Java developer'),
+		('Middle Java developer'),
+		('Senior Java developer'),
+		('Junior JavaScript developer'),
+		('Middle JavaScript developer'),
+		('Senior JavaScript developer'),
+		('Junior Manual QA engineer'),
+		('Middle Manual QA engineer'),
+		('Senior Manual QA engineer'),
+		('Project Manager'),
+		('Designer'),
+		('HR'),
+		('CEO'),
+		('Sales manager'),
+		('Junior Automation QA engineer'),
+		('Middle Automation QA engineer'),
+		('Senior Automation QA engineer');
 		
 select * from roles;
 
---10)Создать таблицу roles_employee
+--10)Create table roles_employee:
 --- id. Serial  primary key,
---- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
---- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+--- employee_id. Int, not null, unique (foreign key for employees table,  id)
+--- role_id. Int, not null (foreign key for roles table,  id)
 
 create table roles_employee(
 	id serial primary key,
@@ -210,7 +228,7 @@ create table roles_employee(
 
 select * from roles_employee;
 
---11)Наполнить таблицу roles_employee 40 строками:
+--11)Populate the roles_employee table with 40 rows:
 insert into roles_employee(employee_id, role_id)
 values	(21,1),
 		(41,5),
