@@ -8,7 +8,7 @@ create table employees(
 
 select * from employees;
 
---2)Наполнить таблицу employee 70 строками..
+--2)Наполнить таблицу employee 70 строками.
 insert into employees(employee_name)
 values  ('Евгений Мухин'
 		('Михаил Сергеев'),
@@ -197,6 +197,7 @@ select * from roles;
 --- id. Serial  primary key,
 --- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
 --- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+
 create table roles_employee(
 	id serial primary key,
 	employee_id int not null unique,
