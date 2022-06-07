@@ -8,9 +8,9 @@ create table employees(
 
 select * from employees;
 
---2)Наполнить таблицу employee 70 строками..
+--2)Наполнить таблицу employee 70 строками.
 insert into employees(employee_name)
-values  	('Евгений Мухин'
+values  ('Евгений Мухин'
 		('Михаил Сергеев'),
 		('София Селиванова'),
 		('Анна Игнатова'),
@@ -96,7 +96,7 @@ select * from salary;
 
 --4)Наполнить таблицу salary 15 строками:
 insert into salary(monthly_salary)
-values  	(1000),
+values  (1000),
 		(1100),
 		(1200),
 		(1300),
@@ -130,7 +130,7 @@ select * from employee_salary;
 --6)Наполнить таблицу employee_salary 40 строками:
 --- в 10 строк из 40 вставить несуществующие employee_id
 insert into employee_salary(employee_id, salary_id)
-values  	(54,2),
+values  (54,2),
 		(35,9),
 		(48,6),
 		(27,6),
@@ -189,7 +189,7 @@ alter column role_name type varchar(30);
 
 --9)Наполнить таблицу roles 20 строками:
 insert into roles(role_name)
-values  	('Junior Python developer'),		('Middle Python developer'),		('Senior Python developer'),		('Junior Java developer'),		('Middle Java developer'),		('Senior Java developer'),		('Junior JavaScript developer'),		('Middle JavaScript developer'),		('Senior JavaScript developer'),		('Junior Manual QA engineer'),		('Middle Manual QA engineer'),		('Senior Manual QA engineer'),		('Project Manager'),		('Designer'),		('HR'),		('CEO'),		('Sales manager'),		('Junior Automation QA engineer'),		('Middle Automation QA engineer'),		('Senior Automation QA engineer');
+values  ('Junior Python developer'),		('Middle Python developer'),		('Senior Python developer'),		('Junior Java developer'),		('Middle Java developer'),		('Senior Java developer'),		('Junior JavaScript developer'),		('Middle JavaScript developer'),		('Senior JavaScript developer'),		('Junior Manual QA engineer'),		('Middle Manual QA engineer'),		('Senior Manual QA engineer'),		('Project Manager'),		('Designer'),		('HR'),		('CEO'),		('Sales manager'),		('Junior Automation QA engineer'),		('Middle Automation QA engineer'),		('Senior Automation QA engineer');
 		
 select * from roles;
 
@@ -197,6 +197,7 @@ select * from roles;
 --- id. Serial  primary key,
 --- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
 --- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
+
 create table roles_employee(
 	id serial primary key,
 	employee_id int not null unique,
@@ -211,7 +212,7 @@ select * from roles_employee;
 
 --11)Наполнить таблицу roles_employee 40 строками:
 insert into roles_employee(employee_id, role_id)
-values		(21,1),
+values	(21,1),
 		(41,5),
 		(52,14),
 		(5,20),
