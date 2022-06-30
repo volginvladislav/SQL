@@ -147,14 +147,14 @@ join roles_employee on roles_employee.employee_id = employee_salary.employee_id
 join roles on roles.id = roles_employee.role_id 
 where roles.role_name like '%JavaScript%developer%';
 
---23) Вывести минимальную ЗП QA инженеров.
+--23)Вывести минимальную ЗП QA инженеров.
 select min(monthly_salary) as min_QA_salary from salary
 join employee_salary on employee_salary.salary_id = salary.id 
 join roles_employee on roles_employee.employee_id = employee_salary.employee_id 
 join roles on roles.id = roles_employee.role_id 
 where roles.role_name like '%QA%';
 
---24)Вывести максимальную ЗП QA инженеров
+--24)Вывести максимальную ЗП QA инженеров.
 select max(monthly_salary) as max_QA_salary from salary
 join employee_salary on employee_salary.salary_id = salary.id 
 join roles_employee on roles_employee.employee_id = employee_salary.employee_id 
@@ -192,7 +192,7 @@ join salary on salary.id = employee_salary.salary_id
 order by salary.monthly_salary;
 
 
---30) Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300.
+--30)Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП от 1700 до 2300.
 select employees.employee_name,roles.role_name, salary.monthly_salary from employees
 join roles_employee on employees.id = roles_employee.employee_id
 join roles on roles.id = roles_employee.role_id
