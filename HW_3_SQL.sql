@@ -9,7 +9,7 @@ join salary on employee_salary.salary_id = salary.id
 join employees on employee_salary.employee_id = employees.id
 where monthly_salary < 2000;
 
---3)Вывести все зарплатные позиции, но работник по ним не назначен. (ЗП есть, но не понятно кто её получает.)
+--3)Вывести все зарплатные позиции, но работник по ним не назначен. 
 select monthly_salary from employee_salary 
 join salary on employee_salary.salary_id = salary.id
 where not employee_id in (select id from employees);
